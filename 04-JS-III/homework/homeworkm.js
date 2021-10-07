@@ -5,7 +5,7 @@ function devolverPrimerElemento(array) {
   // Tu código:
   return array[0];
 }
-// Construir una matriz es simple,  declarar una variable y establecerla en []
+// Construir una matriz es simple, declarar una variable y establecerla en []
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array

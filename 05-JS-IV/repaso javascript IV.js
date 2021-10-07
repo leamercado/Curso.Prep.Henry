@@ -66,5 +66,47 @@ nuevoObjeto.nombreMetodo()     para llamar al metodo
 */
 
 /*
+Bucles for…in
+A veces queremos iterar sobre cada par clave-valor en nuestro objeto. 
+Con las matrices, utilizamos un estándar para el bucle y una variable de número de índice. 
+Los objetos no contienen índices numéricos, por lo que el bucle estándar no funcionará para los objetos. 
 
+Javascript tiene un segundo tipo de bucle for integrado llamado "for ... in loop". 
+Es una sintaxis ligeramente diferente, comienza igual pero 
+entre paréntesis declararemos una variable, la palabra clave in y el nombre del objeto. 
+Esto recorrerá cada clave del objeto y finalizará cuando se hayan iterado todas las claves. 
+Podemos usar esta clave, y la notación de corchetes, en nuestro bucle for para acceder al valor asociado 
+con esa clave.
 */
+
+const usuario = {
+    username: 'juan.perez',
+    password: 'loremipsumpwd123',
+    lovesJavascript: true,
+    favoriteNumber: 42
+};
+
+for (let clave in usuario){  //Recorrera cada clave del objeto, hasta que haya terminado
+    console.log(clave);
+    console.log(usuario[clave]);    //Accedemos al valor asociado mediante corchetes
+}
+
+/*
+La palabra clave 'this'
+Los objetos tienen una palabra clave autorreferencial que se puede aplicar en cada objeto llamado this. 
+Cuando se llama dentro de un objeto, se refiere a ese mismo objeto. this puede usarse para acceder 
+a otras claves en el mismo objeto, y es especialmente útil en métodos:
+*/
+
+const usuario={
+    nombre='juan.perez',
+    password='loremimpsum',
+    lovesJavascript=true,
+    decirHola:function(){
+        console.log (this.nombre+ ' manda saludos');
+    }
+}
+
+usuario.decirHola(); // 'juan.perez manda saludos'
+
+
